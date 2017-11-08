@@ -22,7 +22,14 @@ def binary_search(arr, length, key):
         else:
             break
 
-    print("element found at : " + str(arr.index(mid) + 1))
+    print("binary search: element found at : " + str(arr.index(mid) + 1))
+
+
+def linear_search(arr, length, key):
+    for i in range(length):
+        if arr[i] == key:
+            print("linear search : element found at : " + str(i + 1))
+            break
 
 
 def main():
@@ -30,7 +37,7 @@ def main():
     a = sorted(random.sample(range(1, 100000), n))
     key = random.choice(a)
     binary_search(a, n, key)
-
+    linear_search(a, n, key)
 
 if __name__ == "__main__":
     main()
