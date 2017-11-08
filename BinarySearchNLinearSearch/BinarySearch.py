@@ -1,15 +1,15 @@
 import random
 
 n = 1000
-a = random.sample(range(1, 100000), n)
+a = sorted(random.sample(range(1, 100000), n))
 
 
 def get_mid(arr, low_ind, high_ind):
     return arr[round((low_ind + high_ind) / 2)]
 
 
-key = random.randint(1, 100000)
-print("key element is " + str(key))
+key = random.choice(a)
+print("key element is %d and index is %d" % (key, a.index(key)+1))
 low = a[0]
 high = a[n - 1]
 mid = get_mid(a, 0, n-1)
