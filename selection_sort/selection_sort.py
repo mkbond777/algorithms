@@ -15,7 +15,7 @@ def select_sort(a, length):
 
 
 def main():
-    for n in range(1000, 10000, 1000):
+    for n in range(1000, 2000, 100):
         arr = random.sample(range(1, 1000000), n)
         count = select_sort(arr, n)
         print("array size %d has complexity %d" % (n, count))
